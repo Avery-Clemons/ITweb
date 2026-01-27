@@ -1,0 +1,144 @@
+/*************************************************************
+  main.css — CSS Styling Demo (based on Lecture Note 4)
+
+  Topics included from the PPT:
+  - Inserting CSS: external vs embedded vs inline (cascade order)
+  - Units: %, em
+  - Colors: hex, rgb(), rgba()
+  - Selectors: type, id, class, multiple, relational, attribute, pseudo
+  - Fonts + shorthand font
+  - Text indent / align / decoration
+  - Text shadow
+*************************************************************/
+
+/* UNIVERSAL selector: targets everything (use carefully) */
+* {
+  /* A simple reset-ish choice */
+  box-sizing: border-box;
+}
+
+/* TYPE selector: targets all <body> elements */
+body {
+  /* Font-family fallback system: try first, then next... : */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Font size can be % (relative to browser default) : */
+  font-size: 100%;
+
+  /* Units using em: scalable spacing : */
+  margin: 2em;
+
+  /* Hex color example (background). Slides show #FFFFCC / shorthand idea : */
+  background-color: #FFFFCC;
+
+  /* RGB example (text color) */
+  color: rgb(30, 30, 30);
+}
+
+/* ID selector: targets the element with id="top" */
+#top {
+  /* Example from PPT: border-bottom + padding using em : */
+  padding-bottom: 0.75em;
+  border-bottom: 3px solid #000;
+}
+
+/* CLASS selector: targets elements with class="tagline" */
+.tagline {
+  font-size: 0.95em;
+  opacity: 0.9; /* “opacity-value” idea (CSS3 transparency concept) : */
+}
+
+/* TYPE selector for headings */
+h1 {
+  /* Text shadow syntax: offsetX offsetY blur color : */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* MULTIPLE selectors: apply same rules to many elements : */
+h2, h3 {
+  color: #0033aa;
+}
+
+/* A simple “card” look for sections */
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1em;
+  margin-top: 1.25em;
+  border-radius: 10px;
+}
+
+/* COMBINED selector: “a class within an element”
+   ul.speakers means: <ul class="speakers"> ... : */
+ul.speakers {
+  list-style-type: square;
+  padding-left: 1.2em;
+}
+
+/* RELATIONAL selector (descendant):
+   main li means: any <li> that is inside <main> (at any depth) : */
+main li {
+  font-size: 95%;
+  margin: 0.35em 0;
+}
+
+/* RELATIONAL selector (descendant):
+   ul a means: any <a> inside a <ul> : */
+ul a {
+  color: green;
+  text-decoration: none;
+}
+
+/* PSEUDO-CLASSES:
+   :link :visited :hover :focus etc. are mentioned in the PPT : */
+a:link {
+  color: green;
+}
+a:visited {
+  color: #2a7a2a;
+}
+a:hover, a:focus {
+  color: fuchsia;
+  text-decoration: underline;
+}
+
+/* TEXT indentation + alignment examples : */
+main p {
+  text-indent: 2em;
+}
+
+/* Adjacent sibling selector: h2 + p means “the first <p> immediately after an <h2>” : */
+h2 + p {
+  margin-top: 0.5em;
+}
+
+/* General sibling selector (CSS3): h2 ~ p means “all <p> after an <h2> (same parent)” : */
+h2 ~ p {
+  margin-left: 1em;
+}
+
+/* ATTRIBUTE selectors : */
+*[href] {
+  /* Any element that has an href attribute */
+  font-size: 100%;
+}
+
+input[type="submit"] {
+  border: 1px solid black;
+  color: #ef9c00;
+  background-color: #facd8a;
+  padding: 0.5em 0.9em;
+  cursor: pointer;
+}
+
+/* FONT shorthand demo (style weight size/line-height family) : */
+footer p {
+  font: italic 80%/140% "Times New Roman", Times, serif;
+  text-align: right; /* alignment example : */
+  margin-top: 2em;
+}
+
+/* PSEUDO-ELEMENT demo: make the first letter bigger : */
+main p:first-child::first-letter {
+  font-size: 150%;
+}
