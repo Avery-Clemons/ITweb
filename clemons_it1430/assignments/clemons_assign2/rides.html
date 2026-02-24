@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clemons: Assign2</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+        <header>
+              <h1>
+          <img src="./Images/MKlogo.png"  alt="Magic Kingdom Logo">
+        </h1>
+            <h1>The Magic You Can Feel</h1>
+            <nav>
+             <a href="index.html">Home</a>
+                <a href="rides.html">Rides</a>
+                <a href="info.html">Info</a>
+                <a href="order.html">Order</a>
+                <a href="index.html#events">Upcoming Events</a>
+                <a href="index.html#news">Related Park News</a> 
+            </nav>
+            <hr>  
+        </header> 
+        <main>
+            <h2>Order Tickets</h2>
+            <form action="formProcessor.html" method="get">
+<form>
+  <fieldset>
+    <legend>Contact Information</legend>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" max="100">
+  </fieldset>
+
+  <fieldset>
+    <legend>Ticket Information</legend>
+
+    <label for="tickets">Number of Tickets?</label>
+    <select id="tickets" name="tickets">
+      <option value=""></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+
+    <br><br>
+
+    <label for="myRange">How much do you want to donate to the park?</label>
+    <div class="slidecontainer">
+      1 <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="donation"> 100
+    </div>
+
+    <br>
+
+    <p>Would you like to add any of the following passes to your ticket(s)?</p>
+    <input type="checkbox" id="meal_pass" name="passes" value="meal" checked>
+    <label for="meal_pass">Disney Meal Pass</label>
+
+    <input type="checkbox" id="water_pass" name="passes" value="water">
+    <label for="water_pass">Water Park Pass</label>
+
+    <br>
+
+    <input type="checkbox" id="lightning_lane" name="passes" value="lightning" checked>
+    <label for="lightning_lane">Lightning Lane Pass</label>
+
+    <input type="checkbox" id="premier_pass" name="passes" value="premier">
+    <label for="premier_pass">Lightning Lane Premier Pass</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Delivery Information</legend>
+    
+    <label for="delivery_date">Delivery Date</label>
+    <input type="date" id="delivery_date" name="delivery_date">
+
+    <br><br>
+
+    <p>How would you like to receive your Tickets?</p>
+
+    <input type="radio" id="email_delivery" name="delivery_method" value="email">
+    <label for="email_delivery">Email</label>
+
+    <input type="radio" id="mail_delivery" name="delivery_method" value="mail">
+    <label for="mail_delivery">Mail</label>
+
+    <input type="radio" id="magicmobile" name="delivery_method" value="magicmobile">
+    <label for="magicmobile">Disney MagicMobile</label>
+
+    <br>
+
+    <input type="radio" id="jet" name="delivery_method" value="jet">
+    <label for="jet">Private Jet</label>
+
+    <input type="radio" id="band" name="delivery_method" value="band">
+    <label for="band">MagicBand</label>
+
+    <input type="radio" id="card" name="delivery_method" value="card">
+    <label for="card">Physical Card Pickup</label>
+  </fieldset>
+  
+  <br>
+  <button type="submit">Purchase Tickets</button>
+</form>
+</main>  
+    <footer>
+            <p>© Feburary 22, 2026 -
+                <a href="mailto:ac47968@georgiasouthern.edu">ac47968@georgiasouthern.edu</a>     
+    </footer>  
+</body>
+</html>
