@@ -1,0 +1,295 @@
+<!--
+===========================================
+  Picture Gallery
+  Fill the TODO sections
+===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TODO 1:
+        Add:
+        - charset
+        - viewport
+        - title = "Picture Grid"
+    -->
+<title>Picture Grid</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!--
+    IMPORTANT:
+    Bootstrap 4’s navbar toggler + dropdown requires:
+    1) jQuery
+    2) Popper
+    3) Bootstrap JS
+    If you only include bootstrap.min.js, some features won't work.
+  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- TODO 2:
+        Link Bootstrap CSS CDN here
+        (copy from getbootstrap.com)
+    -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- TODO 3:
+        Link your custom CSS file (grided.css)
+    -->
+  <link rel="stylesheet" href="grided.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <!-- ========================= -->
+    <!-- NAVBAR SECTION -->
+    <!-- ========================= -->
+
+    <!-- TODO 4:
+        Create a Bootstrap navbar
+        It should contain:
+        - Brand name (Gallery)
+        - Home link
+        - Cart link
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://unsplash.com" target="_blank" rel="nopener">
+            photoshopping.com
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                   <a class="nav-link" href="#">
+                     Home
+                    </a>
+                    
+                </li>
+                
+                  <li class="nav-item active">
+                   <a  class="nav-link" href="#">
+                      My Cart 
+                    </a>
+                </li>
+
+                  <li class="nav-item dropdown">
+                   <a  class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu">
+                       <a href="dropdown-item" href="#">My Orders</a> 
+                          <a href="dropdown-item" href="#">My Wishlist</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="dropdown-item" href="#">Logout</a>
+                        </div>
+                </li>
+            </ul>
+
+            <form action="#" class="my-2 my-lg-0">
+                <button class="btn btn-outline-primary" type="submit">
+                    Sign Up/Sign In
+                </button>
+            </form>
+
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- HERO / WELCOME SECTION -->
+    <!-- ========================= -->
+
+    <!-- TODO 5:
+        Create a jumbotron (or div)
+        Add:
+        - Heading: Welcome to Gallery
+        - Small description
+    -->
+<header class="jumbotron jumbotron-fluid text-center bg-transparent">
+    <div class="container">
+    <h1  class="display-4 a"> Welcome to the Gallery!</h1>
+    <p class="lead a">Get all pictures here</p>
+    <hr class="my-4">
+    <p class="a">Search by category.</p>
+
+    <form class="form-inline justify-content-center" action="#" method="GET">
+    <label class="sr-only" for="searchInput">Search</label>
+    <input
+      id="searchInput"
+      class="form-control mr-2"
+      type="search"
+      name="q"
+      placeholder="Search (e.g. nature, city, food)"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+</header>
+
+
+    <!-- ========================= -->
+    <!-- IMAGE GALLERY SECTION -->
+    <!-- ========================= -->
+
+    <!--
+        IMPORTANT:
+        DO NOT use <table>
+
+        We will use:
+        <div class="gallery">  tags from bootstrap (margin and padding)
+
+        Inside it add 6–9 <img> 
+    -->
+
+    <main class="container">
+        <section class="gallery-grid">
+            <figure class="gallery-item" data-category="nature"> 
+                <img class="size-img"  src="https://images.unsplash.com/photo-1453872302360-eed3c5f8ff66?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHRyb3BpY2FsJTIwYmVhY2h8ZW58MHx8MHx8fDA%3D"
+                alt="Tropical beach with blue ocean" loading="lazy"/>
+                <figcaption>Nature: Tropical Beach</figcaption>
+            </figure>
+        
+           <figure class="gallery-item" data-category="nature">
+                <img class="size-img"  src="https://plus.unsplash.com/premium_photo-1670428615389-7bf61172e1be?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fG1vdW50YWlufGVufDB8fDB8fHww"
+                alt="Icy Mountains" loading="lazy"/> 
+                <figcaption>Nature: Mountains</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="nature">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1673275163331-2de2bfa69c1f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fG5pZ2h0JTIwc2t5JTIwbmF0dXJlfGVufDB8fDB8fHww"
+                alt="Starry Night Sky" loading="lazy"/> 
+                <figcaption>Nature: Night Sky</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="animals">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1565104253590-27a9ef6580f8?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxpb25uZXNzfGVufDB8fDB8fHww"
+                alt="Lionness in the wild" loading="lazy"/> 
+                <figcaption>Animal: Lionness</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="animals">
+                <img class="size-img" src="https://images.unsplash.com/photo-1604608678051-64d46d8d0ffe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHdvbGZ8ZW58MHx8MHx8fDA%3D"
+                alt="Wolf Howling" loading="lazy"/> 
+                <figcaption>Animal: Wolf</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="animals">
+                <img class="size-img" src="https://images.unsplash.com/photo-1511617768747-077bc4b9d018?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHRpZ2VyfGVufDB8fDB8fHww"
+                alt="Tiger Sleeping" loading="lazy"/> 
+                <figcaption>Animal: Tiger</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="city">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1675449672066-db3b9a6cd717?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGF0bGFudGF8ZW58MHx8MHx8fDA%3D"
+                alt="View of Atlanta skyline" loading="lazy"/> 
+                <figcaption>City: Atlanta</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="city">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="View of Parisian bridge" loading="lazy"/> 
+                <figcaption>City: Paris</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="city">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9uZG9ufGVufDB8fDB8fHww"
+                alt="View of London skyline" loading="lazy"/> 
+                <figcaption>City: London</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="food">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1650134973809-d8c3a2da59ba?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJsdWViZXJyeSUyMHBhbmNha2VzfGVufDB8fDB8fHww"
+                alt="Pancakes with syrup and berries" loading="lazy"/> 
+                <figcaption>Food: Pancakes</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="food">
+                <img class="size-img"  src="https://plus.unsplash.com/premium_photo-1664476631037-87a2714dd04e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3N8ZW58MHx8MHx8fDA%3D"
+                alt="Tacos" loading="lazy"/> 
+                <figcaption>Food: Tacos</figcaption>
+            </figure>
+
+               <figure class="gallery-item" data-category="food">
+                <img class="size-img"  src="https://images.unsplash.com/photo-1663334038419-71e6f82e333f?q=80&w=1678&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sushi bridge" loading="lazy"/> 
+                <figcaption>Food: Sushi</figcaption>
+            </figure>
+            </section>
+
+        <section class="mt-5 p-4 glass-panel">
+           <h2 class="a mb-3"> Free Subscription</h2> 
+
+           <form action="#" method="POST">
+            <div class="form-group">
+                <label for="emailInput" class="a">Email Address:</label>
+                <input type="email" class="form-control" id="emailInput" name="email" placeholder="Enter your email please..." required/>
+                <small id="emailHelp" class="form-text text-muted">We'll never share email with anyone else</small>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="newsCheck" name="subscription">
+                <label class="form-check-label b" for="newsCheck">
+                    Subscibe for news and events. 
+                </label>
+            </div>
+            </form>
+            
+            <h3 class="a mt-4">Add your donation</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="number" class="form-control" name="donation" min="0" step="100" placeholder="100.00" aria-label="Dollar Amount"/>
+            </div>
+
+            <form action="thankyou.html">
+                <button class="btn btn-success" type="'sumbit">
+                    Submit
+                </button>
+            </form>
+
+        </section>
+    </main>
+
+    
+
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <!-- TODO 9:
+        Add a small footer text
+        Example: © 2026 My Gallery
+    -->
+<footer class="text-center mt-5 mb-6">
+    <p class="a small">
+   © 2026 photoshopping.com - made for arts and pictures
+    </p>
+</footer>
+
+
+
+
+</body>
+</html>

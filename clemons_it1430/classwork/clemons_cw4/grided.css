@@ -1,0 +1,84 @@
+/* ======================================
+   CSS Starter File
+====================================== */
+
+
+/* =========================
+   TODO 1: Style body
+   - Add background color
+   - Change font
+========================= */
+
+body {  
+    background-image: url('https://plus.unsplash.com/premium_photo-1730005718798-77677f123d84?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh
+}
+
+/* =========================
+   TODO 2: Create gallery grid
+   Use:
+   display: grid
+   grid-template-columns
+   gap
+========================= */
+.gallery-grid{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 16px;
+   padding-bottom: 20px;
+}
+
+.a{
+   font-family: "Roboto", Arial, Helvetica, sans-serif;
+   color: white;
+}
+/* =========================
+   TODO 3: Style images
+   - width 100%
+   - fixed height
+   - object-fit: cover
+========================= */
+.gallery-item{
+   margin: 0;
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+   transition: transform 0.2s ease;
+}
+
+/* =========================
+   TODO 4: Hover effect
+   Make images slightly zoom
+========================= */
+.gallery-item:hover{
+   transform: scale(1.02);
+}
+
+/* =========================
+   TODO 5: Optional styling
+   Add:
+   - padding
+   - margins
+   - borders
+========================= /*
+/*  */
+.gallery-item img{
+   width: 100%;
+   height: 220px;
+   object-fit: cover;
+   display: block;
+}
+.size-img {
+width: 600px;
+height: auto;
+ } 
+
+ .glass-panel{
+   background: rgba(255, 255, 255, 255, 0.15);
+   border: 1px solid rgba(255, 255, 255, 255, 0.25);
+   border-radius: 16px;
+   backdrop-filter: blur(8px);
+ }
